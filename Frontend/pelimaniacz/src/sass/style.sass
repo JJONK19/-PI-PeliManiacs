@@ -10,7 +10,6 @@
     background-color: #151515
     .name
         font-family: "Cairo Play", sans-serif
-        color: white
     img
         width: 2rem
         height: auto
@@ -74,6 +73,14 @@
             max-width: 100%
 
 /* -------------------------------- Catalogo -------------------------------- */
+.busqueda
+    display: flex
+    flex-direction: row
+    background-color: #A91D3A
+    justify-content: center
+    .search
+        width: 400px
+    
 
 .catalog
     background-color: #A91D3A
@@ -81,3 +88,12 @@
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
     gap: 100px
     padding: 16px
+    .pelicula-card
+        width: 250px
+    .cardBody
+        display: flex
+        flex-direction: column
+        button
+            background-color: #A91D3A
+            &:hover
+                background-color: #173B45

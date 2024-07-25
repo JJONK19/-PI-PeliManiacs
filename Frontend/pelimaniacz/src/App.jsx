@@ -2,6 +2,9 @@ import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Catalog from "./components/Catalog/Catalog"
 import Footer from "./components/Footer/Footer"
 import Barra from "./components/Barra/Barra"
+import Login from "./components/Login/Login"
+import Register from "./components/Register/Register"
+import Profile from "./components/Profile/Profile"
 
 function App() {
 
@@ -10,9 +13,9 @@ function App() {
       <Barra />
       <Routes>
         <Route exact path="/" element={<Catalog />} />
-        <Route exact path="/login" element={<Catalog />} />
-        <Route exact path="/register" element={<Catalog />} />
-        <Route exact path="/profile" element={<Catalog />} />
+        <Route exact path="/login" element={<Login />} />
+        <Route exact path="/register" element={<Register />} />
+        <Route exact path="/profile" element={<Profile />} />
       </Routes>
       <Footer />
     </BrowserRouter>

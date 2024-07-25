@@ -1,0 +1,107 @@
+[
+    {
+        "id": 1,
+        "nombre": "Origen",
+        "descripcion": "Un ladrón que roba secretos corporativos utilizando tecnología de compartir sueños recibe la tarea inversa de plantar una idea en la mente de un C.E.O.",
+        "genero": "Ciencia ficción",
+        "imagen": "https://image.tmdb.org/t/p/w185/tXQvtRWfkUUnWJAn2tN3jERIUG.jpg"
+    },
+    {
+        "id": 2,
+        "nombre": "El Caballero Oscuro",
+        "descripcion": "Cuando el villano conocido como el Joker emerge de su misterioso pasado, siembra el caos y el desorden entre la gente de Gotham.",
+        "genero": "Acción",
+        "imagen": "https://image.tmdb.org/t/p/w185/1PEFfYM4PV80dDqqO7jkCBdjbZa.jpg"
+    },
+    {
+        "id": 3,
+        "nombre": "Interestelar",
+        "descripcion": "Un equipo de exploradores viaja a través de un agujero de gusano en el espacio en un intento de asegurar la supervivencia de la humanidad.",
+        "genero": "Ciencia ficción",
+        "imagen": "https://image.tmdb.org/t/p/w185/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg"
+    },
+    {
+        "id": 4,
+        "nombre": "Parásitos",
+        "descripcion": "La codicia y la discriminación de clases amenazan la recién formada relación simbiótica entre la adinerada familia Park y el clan Kim, que está en la miseria.",
+        "genero": "Suspenso",
+        "imagen": "https://image.tmdb.org/t/p/w185/4N55tgxDW0RRATyrZHbx0q9HUKv.jpg"
+    },
+    {
+        "id": 5,
+        "nombre": "Vengadores: Endgame",
+        "descripcion": "Después de los devastadores eventos de Avengers: Infinity War, el universo está en ruinas. Los Vengadores se reúnen una vez más para deshacer las acciones de Thanos y restaurar el orden.",
+        "genero": "Acción",
+        "imagen": "https://image.tmdb.org/t/p/w185/br6krBFpaYmCSglLBWRuhui7tPc.jpg"
+    },
+    {
+        "id": 6,
+        "nombre": "El Padrino",
+        "descripcion": "El envejecido patriarca de una dinastía del crimen organizado transfiere el control de su imperio clandestino a su hijo reacio.",
+        "genero": "Crimen",
+        "imagen": "https://image.tmdb.org/t/p/w185/wLXd1Cd0XW7DhXayfC0Ok5ago9r.jpg"
+    },
+    {
+        "id": 7,
+        "nombre": "Pulp Fiction",
+        "descripcion": "Las vidas de dos matones, un boxeador, un gánster y su esposa, y una pareja de bandidos de restaurante se entrelazan en cuatro relatos de violencia y redención.",
+        "genero": "Crimen",
+        "imagen": "https://image.tmdb.org/t/p/w185/hNcQAuquJxTxl2fJFs1R42DrWcf.jpg"
+    },
+    {
+        "id": 8,
+        "nombre": "Sueño de Fuga",
+        "descripcion": "Dos hombres encarcelados se vinculan durante varios años, encontrando consuelo y eventual redención a través de actos de decencia común.",
+        "genero": "Drama",
+        "imagen": "https://image.tmdb.org/t/p/w185/dc1fX265fZIIY5Hab8I7CdETyJy.jpg"
+    },
+    {
+        "id": 9,
+        "nombre": "Matrix",
+        "descripcion": "Un hacker informático aprende de misteriosos rebeldes sobre la verdadera naturaleza de su realidad y su papel en la guerra contra sus controladores.",
+        "genero": "Ciencia ficción",
+        "imagen": "https://image.tmdb.org/t/p/w185/qK76PKQLd6zlMn0u83Ej9YQOqPL.jpg"
+    },
+    {
+        "id": 10,
+        "nombre": "Forrest Gump",
+        "descripcion": "Las presidencias de Kennedy y Johnson, los eventos de Vietnam, Watergate y otros eventos históricos se desarrollan a través de la perspectiva de un hombre de Alabama con un coeficiente intelectual de 75.",
+        "genero": "Drama",
+        "imagen": "https://image.tmdb.org/t/p/w185/saHP97rTPS5eLmrLQEcANmKrsFl.jpg"
+    },
+    {
+        "id": 11,
+        "nombre": "El Club de la Pelea",
+        "descripcion": "Un oficinista insomne y un fabricante de jabón despreocupado forman un club de lucha clandestino que evoluciona en mucho más.",
+        "genero": "Drama",
+        "imagen": "https://image.tmdb.org/t/p/w185/bI0BhpswEApC0B17RhLZtRVPZiQ.jpg"
+    },
+    {
+        "id": 12,
+        "nombre": "El Señor de los Anillos: La Comunidad del Anillo",
+        "descripcion": "Un humilde Hobbit de la Comarca y ocho compañeros se embarcan en un viaje para destruir el poderoso Anillo Único y salvar la Tierra Media del Señor Oscuro Sauron.",
+        "genero": "Fantasía",
+        "imagen": "https://image.tmdb.org/t/p/w185/9xtH1RmAzQ0rrMBNUMXstb2s3er.jpg"
+    },
+    {
+        "id": 13,
+        "nombre": "Star Wars: Episodio IV - Una Nueva Esperanza",
+        "descripcion": "Luke Skywalker se une a un Caballero Jedi, un piloto presumido, un Wookiee y dos droides para salvar la galaxia de la estación de batalla destructora de planetas del Imperio.",
+        "genero": "Ciencia ficción",
+        "imagen": "https://image.tmdb.org/t/p/w185/ahT4ObS7XKedQkOSpGr1wQ97aKA.jpg"
+    },
+    {
+        "id": 14,
+        "nombre": "El Rey León",
+        "descripcion": "El príncipe león Simba y su padre son blanco de su amargado tío, que quiere ascender al trono.",
+        "genero": "Animación",
+        "imagen": "https://image.tmdb.org/t/p/w185/vEuDJgzrnkhmyBdtlO7hYCZ5Z9P.jpg"
+    },
+    {
+        "id": 15,
+        "nombre": "Gladiador",
+        "descripcion": "Un exgeneral romano busca vengarse del emperador corrupto que asesinó a su familia y lo envió a la esclavitud.",
+        "genero": "Acción",
+        "imagen": "https://image.tmdb.org/t/p/w185/90QFOG5zSN4cbrIVs4DL4ePAuA5.jpg"
+    }
+]
