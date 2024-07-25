@@ -1,10 +1,13 @@
 /* -------------------------------------------------------------------------- */
 /*                      Catalogo con funcion de busqueda                      */
+
+import Item from "./Items/Item";
+
 /* -------------------------------------------------------------------------- */
 function Catalog () {
     return (
-        <div>
-            
+        <div className="catalog">
+            <Item /><Item /><Item /><Item /><Item /><Item />
         </div>
     )
 }

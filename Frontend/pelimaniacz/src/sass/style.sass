@@ -2,8 +2,82 @@
     padding: 0
     margin: 0
 
-@import url('https://fonts.googleapis.com/css2?family=Honk&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Cairo+Play:wght@200..1000&display=swap')
+
+/* --------------------------- Barra de navegacion -------------------------- */
+
 .nav
     background-color: #151515
-    font-family: "Honk", system-ui
-    
+    .name
+        font-family: "Cairo Play", sans-serif
+        color: white
+    img
+        width: 2rem
+        height: auto
+    .darko
+        background-color: #151515
+        &:hover
+            background-color: #151515
+    .cleanLink
+        text-decoration: none
+        color: white
+
+/* ------------------------------ Pie de pagina ----------------------------- */
+
+.footer
+    background-color: #444444
+    color: white
+    padding: 20px 0
+
+    .container
+        max-width: 1200px
+        margin: 0 auto
+        padding: 0 15px
+
+    .row
+        display: flex
+        flex-wrap: wrap
+        margin: 0 -15px
+
+        .col-md-4
+            flex: 0 0 33.3333%
+            max-width: 33.3333%
+            padding: 0 15px
+            margin-bottom: 20px
+
+            h5
+                margin-bottom: 15px
+                font-size: 18px
+                font-weight: bold
+
+            p, ul
+                margin: 0
+                padding: 0
+                list-style: none
+
+                li
+                    margin-bottom: 10px
+
+            .social-links
+                display: flex
+                gap: 10px
+
+                a
+                    color: white
+                    text-decoration: none
+                    &:hover
+                        text-decoration: underline
+
+        .text-center
+            text-align: center
+            flex: 0 0 100%
+            max-width: 100%
+
+/* -------------------------------- Catalogo -------------------------------- */
+
+.catalog
+    background-color: #A91D3A
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
+    gap: 100px
+    padding: 16px
