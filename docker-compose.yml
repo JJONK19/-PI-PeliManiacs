@@ -20,12 +20,12 @@ services:
     depends_on:
       - db
 
-  #frontend:
-  #  build: ./Frontend
-  #  ports:
-  #    - "4200:4200"
-  #  depends_on:
-  #    - backend
+  frontend:
+    build: ./Frontend/pelimaniacz
+    ports:
+      - "4200:4200"
+    depends_on:
+      - backend
 
 volumes:
   postgres_data:
