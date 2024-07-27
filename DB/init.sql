@@ -16,14 +16,6 @@ CREATE TABLE Pelicula (
       REFERENCES Genero(ID)
 );
 
--- TABLA USUARIOS (nombre, username y password)
-CREATE TABLE Usuario (
-    ID SERIAL PRIMARY KEY,
-    Username VARCHAR(50) NOT NULL,
-    Nombre VARCHAR(255) NOT NULL,
-    Password_user VARCHAR(255) NOT NULL
-);
-
 -- TABLA DETALLES (key inc, id int -linkeado a peliculas, username - linkeado a usuarios)
 CREATE TABLE Detalle_Pelicula (
     ID SERIAL PRIMARY KEY,
@@ -36,6 +28,16 @@ CREATE TABLE Detalle_Pelicula (
       FOREIGN KEY(ID_Usuario) 
       REFERENCES Usuario(ID)
 );
+
+-- TABLA USUARIOS (nombre, username y password)
+CREATE TABLE Usuario (
+    ID SERIAL PRIMARY KEY,
+    Username VARCHAR(50) NOT NULL,
+    Nombre VARCHAR(255) NOT NULL,
+    Password_user VARCHAR(255) NOT NULL
+);
+
+
 
 -- ver la referenciacion!!
 

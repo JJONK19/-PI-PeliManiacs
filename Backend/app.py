@@ -18,5 +18,78 @@ def hello():
         return f"Error de conexión a la base de datos: {str(e)}"
     return "Algo salió mal"
 
+@app.route('/getUsuario', methods=['GET'])
+def get_usuarios():
+    try:
+        conn = get_db_connection()
+        cur = conn.cursor()
+        cur.execute('SELECT id, username, nombre, password_user FROM Usuario ORDER BY id')
+        usuarios = cur.fetchall()
+        cur.close()
+        conn.close()
+        usuarios_list = [{'idUser': usuario[0], 'username': usuario[1], 'nombre': usuario[2], 'password': usuario[3]} for usuario in usuarios]
+        return jsonify(usuarios_list)
+    except Exception as e:
+        return f"Error al obtener los usuarios: {str(e)}", 500
+
+@app.route('/createUsuario', methods=['POST'])
+def create_usuario():
+    data = request.json
+    username = data['username']
+    nombre = data['nombre']
+    password_user = data['password_user']
+    try:
+        conn = get_db_connection()
+        cur = conn.cursor()
+        cur.execute('INSERT INTO Usuario (username, nombre, password_user) VALUES (%s, %s, %s) RETURNING id', 
+                    (username, nombre, password_user))
+        usuario_id = cur.fetchone()[0]
+        conn.commit()
+        cur.close()
+        conn.close()
+        return jsonify({'id': usuario_id, 'username': username, 'nombre': nombre}), 201
+    except Exception as e:
+        return f"Error al crear el usuario: {str(e)}", 500
+
+@app.route('/getPeliculas', methods=['GET'])
+def get_peliculas():
+    try:
+        conn = get_db_connection()
+        cur = conn.cursor()
+        cur.execute('''
+            SELECT 
+                p.id, 
+                p.nombre, 
+                p.descripcion, 
+                g.nombre AS genero, 
+                p.foto,
+                dp.ID_Usuario
+            FROM Pelicula p
+            LEFT JOIN Genero g ON p.ID_Genero = g.id
+            LEFT JOIN Detalle_Pelicula dp ON p.id = dp.ID_Pelicula
+            ORDER BY p.id
+        ''')
+        rows = cur.fetchall()
+        cur.close()
+        conn.close()
+
+        peliculas_list = []
+        for row in rows:
+            pelicula = {
+                'id': row[0],
+                'nombre': row[1],
+                'descripcion': row[2],
+                'genero': row[3],
+                'imagen': row[4],
+                'idUser': row[5]
+            }
+            peliculas_list.append(pelicula)
+
+        return jsonify(peliculas_list)
+    except Exception as e:
+        return f"Error al obtener las películas: {str(e)}", 500
+
+
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
