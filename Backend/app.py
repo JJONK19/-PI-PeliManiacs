@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, jsonify, request
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import text
 import os
@@ -21,7 +21,7 @@ def hello():
 @app.route('/getUsuario', methods=['GET'])
 def get_usuarios():
     try:
-        conn = get_db_connection()
+        conn = db.engine.raw_connection()
         cur = conn.cursor()
         cur.execute('SELECT id, username, nombre, password_user FROM Usuario ORDER BY id')
         usuarios = cur.fetchall()
@@ -39,7 +39,7 @@ def create_usuario():
     nombre = data['nombre']
     password_user = data['password_user']
     try:
-        conn = get_db_connection()
+        conn = db.engine.raw_connection()
         cur = conn.cursor()
         cur.execute('INSERT INTO Usuario (username, nombre, password_user) VALUES (%s, %s, %s) RETURNING id', 
                     (username, nombre, password_user))
@@ -54,7 +54,7 @@ def create_usuario():
 @app.route('/getPeliculas', methods=['GET'])
 def get_peliculas():
     try:
-        conn = get_db_connection()
+        conn = db.engine.raw_connection()
         cur = conn.cursor()
         cur.execute('''
             SELECT 
@@ -89,7 +89,5 @@ def get_peliculas():
     except Exception as e:
         return f"Error al obtener las películas: {str(e)}", 500
 
-
-
 if __name__ == '__main__':
-    app.run(host='0.0.0.0')
+    app.run(host='0.0.0.0', port=5000)

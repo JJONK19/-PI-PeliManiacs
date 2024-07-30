@@ -4,6 +4,14 @@ CREATE TABLE Genero (
     Nombre VARCHAR(255) NOT NULL
 );
 
+CREATE TABLE Usuario (
+    ID SERIAL PRIMARY KEY,
+    Username VARCHAR(50) NOT NULL,
+    Nombre VARCHAR(255) NOT NULL,
+    Password_user VARCHAR(255) NOT NULL
+);
+
+
 -- TABLA PELICULA (key inc, nombre, desc, genero y foto LINK! String)
 CREATE TABLE Pelicula (
     ID SERIAL PRIMARY KEY,
@@ -30,12 +38,6 @@ CREATE TABLE Detalle_Pelicula (
 );
 
 -- TABLA USUARIOS (nombre, username y password)
-CREATE TABLE Usuario (
-    ID SERIAL PRIMARY KEY,
-    Username VARCHAR(50) NOT NULL,
-    Nombre VARCHAR(255) NOT NULL,
-    Password_user VARCHAR(255) NOT NULL
-);
 
 
 
@@ -77,20 +79,28 @@ INSERT INTO Usuario (Username, Nombre, Password_user) VALUES
 ('user3', 'User 3', 'password3');
 
 -- Insert Detalle_Pelicula 
-INSERT INTO Detalle_Pelicula (ID_Pelicula, Username) VALUES
-(1, 'user1'),
-(2, 'user2'),
-(3, 'user3'),
-(4, 'user1'),
-(5, 'user2'),
-(6, 'user3')
-(7, 'user1'),
-(8, 'user2'),
-(9, 'user3'),
-(10, 'user1'),
-(11, 'user2'),
-(12, 'user3'),
-(13, 'user1'),
-(14, 'user2'),
-(15, 'user3');
+-- Insert Detalle_Pelicula
+
+SELECT ID FROM Usuario WHERE Username = 'user1';
+SELECT ID FROM Usuario WHERE Username = 'user2';
+SELECT ID FROM Usuario WHERE Username = 'user3';
+
+
+INSERT INTO Detalle_Pelicula (ID_Pelicula, ID_Usuario) VALUES
+(1, 1),
+(2, 2),
+(3, 3),
+(4, 1),
+(5, 2),
+(6, 3),
+(7, 1),
+(8, 2),
+(9, 3),
+(10, 1),
+(11, 2),
+(12, 3),
+(13, 1),
+(14, 2),
+(15, 3);
+
 

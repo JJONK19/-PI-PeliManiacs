@@ -23,7 +23,7 @@ services:
   frontend:
     build: ./Frontend/pelimaniacz
     ports:
-      - "4200:4200"
+      - "4200:5173"
     depends_on:
       - backend
 
