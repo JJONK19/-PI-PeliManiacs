@@ -80,7 +80,6 @@
     justify-content: center
     .search
         width: 400px
-    
 
 .catalog
     background-color: #A91D3A
@@ -88,12 +87,41 @@
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
     gap: 100px
     padding: 16px
+
     .pelicula-card
         width: 250px
+        height: 500px
+        &:hover
+            transform: scale(1.05)
+
     .cardBody
         display: flex
         flex-direction: column
-        button
-            background-color: #A91D3A
-            &:hover
-                background-color: #173B45
+    .no-underline
+        text-decoration: none
+
+/* ---------------------------------- Item ---------------------------------- */
+.item
+    background-color: #A91D3A
+    display: flex
+    flex-direction: column
+    
+    .top
+        display: flex
+    .promo
+        display: flex
+        background-color: #543864
+        align-items: center
+        img
+            width: 300px
+
+.bg-main
+    background-color: #A91D3A
+
+/* ---------------------------------- login --------------------------------- */
+.loginContainer
+    height: 60vh
+    justify-content: center
+    align-items: center
+    
+    

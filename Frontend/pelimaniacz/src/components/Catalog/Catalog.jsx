@@ -3,9 +3,9 @@
 /* -------------------------------------------------------------------------- */
 
 //import Item from "./Items/Item";
+import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import peliculasData from "../../test/pelis.json"
 import { useEffect, useState } from "react";
 import Card from 'react-bootstrap/Card';
 
@@ -17,9 +17,28 @@ function Catalog() {
 
 
     useEffect(() => {
-        // Parsear y establecer los datos del JSON
-        setPeliculas(peliculasData);
-        setFilteredPeliculas(peliculasData);
+        // Llamada a la API para obtener los nombres de los archivos
+        fetch(`http://127.0.0.1:5000/getPeliculas`)
+            .then(response => {
+                if (!response.ok) {
+                    Swal.fire({
+                        title: 'Error',
+                        text: 'Problema de red',
+                        icon: 'error'
+                    })
+                }
+                return response.json();
+            })
+            .then(data => (setPeliculas(data),
+                setFilteredPeliculas(data))
+            )
+            .catch(error => {
+                Swal.fire({
+                    title: 'Error',
+                    text: error,
+                    icon: 'error'
+                })
+            });
     }, []);
 
     const handleSearchChange = (e) => {
@@ -48,15 +67,15 @@ function Catalog() {
             </Form>
             <div className="catalog">
                 {filteredPeliculas.map(pelicula => (
-                    <Card key={pelicula.id} className="pelicula-card bg-dark text-white">
-                        <Card.Img variant="top" src={pelicula.imagen} />
-                        <Card.Body className='cardBody'>
-                            <Card.Title>{pelicula.nombre}</Card.Title>
-                            <Card.Text>{pelicula.descripcion}</Card.Text>
-                            <Button variant="black text-white">Ver reseñas</Button>
-                        </Card.Body>
-                    </Card>
-
+                    <Link key={pelicula.id} to={`/details/${pelicula.id}`} className='no-underline'>
+                        <Card className="pelicula-card bg-dark text-white">
+                            <Card.Img variant="top" src={pelicula.imagen} />
+                            <Card.Body className='cardBody'>
+                                <Card.Title className='fs-4'>{pelicula.nombre}</Card.Title>
+                                <Card.Text className='fs-6'>{pelicula.genero}</Card.Text>
+                            </Card.Body>
+                        </Card>
+                    </Link>
 
 
 
