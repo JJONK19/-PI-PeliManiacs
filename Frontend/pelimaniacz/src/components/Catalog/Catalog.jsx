@@ -14,7 +14,8 @@ function Catalog() {
     const [peliculas, setPeliculas] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');
     const [filteredPeliculas, setFilteredPeliculas] = useState([]);
-
+    const user = JSON.parse(sessionStorage.getItem('user'));
+    console.log("user" + user)
 
     useEffect(() => {
         // Llamada a la API para obtener los nombres de los archivos
